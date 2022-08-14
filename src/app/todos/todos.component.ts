@@ -15,8 +15,11 @@ export class TodosComponent implements OnInit, OnDestroy {
 
   /** List of todos. */
   todos: Todo[] = [];
+  toggleSort: boolean = true;
 
-  constructor(private appService: AppService) {
+  constructor(
+    private appService: AppService,
+    ) {
     console.debug('TodosComponent initiated.');
   }
 
@@ -35,6 +38,17 @@ export class TodosComponent implements OnInit, OnDestroy {
   toggleTodo(todo: Todo): void {
     todo.done = !todo.done;
     this.appService.todos.next(this.todos);
+  }
+
+  sortBy(type: keyof Todo) {
+    this.todos.sort((a: Todo, b: Todo) => {
+      if (this.toggleSort) {
+        return (a[type] as number) - (b[type] as number)
+      } else {
+        return (b[type] as number) - (a[type] as number)
+      }
+    });
+    this.toggleSort = !this.toggleSort
   }
 
   clean(): void {

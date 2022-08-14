@@ -4,12 +4,28 @@
   <!-- Title -->
   <div class="fw-bold">My Todos</div>
 
-  <!-- Delete -->
-  <button (click)="clean()"
-          class="btn btn-danger btn-sm ms-auto text-light"
-          title="Delete completed tasks">
-    Clean
-  </button>
+  <!-- Sorting -->
+  <div class="buttons">
+    <button (click)="sortBy('priority')"
+        class="btn btn-primary btn-sm ms-auto text-light me-3"
+        title="Delete completed tasks">
+      Sort by priority
+    </button>
+
+    <button (click)="sortBy('date')"
+        class="btn btn-primary btn-sm ms-auto text-light me-3"
+        title="Delete completed tasks">
+      Sort by date
+    </button>
+
+    <!-- Delete -->
+    <button (click)="clean()"
+        class="btn btn-danger btn-sm ms-auto text-light"
+        title="Delete completed tasks">
+      Clean
+    </button>
+  </div>
+
 </div>
 
 <!-- Todos -->

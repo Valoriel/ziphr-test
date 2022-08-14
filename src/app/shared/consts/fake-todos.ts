@@ -4,28 +4,28 @@ import { Todo } from '../interfaces/todo';
 /** List of fake todos for testing. */
 export const FakeTodos: Todo[] = [
   {
-    title: 'Setup Foo module for testing',
+    title: 'I was made for lovin\' you, baby',
+    date: Date.now(),
+    priority: TodoPriority.HIGH,
+    done: false,
+  },
+  {
+    title: 'You were made for lovin\' me',
+    date: Date.now(),
+    priority: TodoPriority.NORMAL,
+    done: false,
+  },
+  {
+    title: 'And I can\'t get enough of you, baby',
     date: Date.now(),
     priority: TodoPriority.LOW,
     done: false,
   },
   {
-    title: 'Do something random here',
-    date: Date.now(),
-    priority: TodoPriority.NORMAL,
-    done: false,
-  },
-  {
-    title: 'Remove Bar module from app module',
-    date: Date.now(),
-    priority: TodoPriority.NORMAL,
-    done: true,
-  },
-  {
-    title: 'Write unit-tests for XYZ app',
+    title: 'Can you get enough of me?',
     date: Date.now(),
     priority: TodoPriority.HIGH,
-    done: false,
+    done: true,
   },
   {
     title: 'Delete ABC module completely',

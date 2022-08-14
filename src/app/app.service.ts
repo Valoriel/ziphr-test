@@ -38,4 +38,11 @@ export class AppService {
       },
     });
   }
+
+  setNewTodos(todos: Todo[]) {
+    this.todos.next([
+      ...this.todos.value,
+      ...todos
+    ])
+  }
 }

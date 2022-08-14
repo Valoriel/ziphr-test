@@ -18,7 +18,7 @@
 @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/buttons";
 //@import "~bootstrap/scss/transitions";
-//@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/button-group";
 //@import "~bootstrap/scss/nav";
 //@import "~bootstrap/scss/navbar";
@@ -50,9 +50,36 @@
 
 .page-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-weight: $font-weight-bold;
   padding-bottom: map_get($spacers, 3);
   margin-bottom: map_get($spacers, 3);
   border-bottom: $border-width solid $border-color;
+}
+
+.card {
+  cursor: pointer;
+  border-left-width: 4px;
+
+  &:hover:not(.done) {
+    background: rgba(black, 0.01);
+  }
+
+  &.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+  }
+
+  &.priority-0 {
+    border-left-color: $primary;
+  }
+
+  &.priority-1 {
+    border-left-color: $warning;
+  }
+
+  &.priority-2 {
+    border-left-color: $danger;
+  }
 }

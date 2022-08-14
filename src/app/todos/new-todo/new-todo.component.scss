@@ -1,0 +1,15 @@
+@import "src/variables";
+.dropdown-toggle {
+  border-radius: 0.375rem;
+}
+.priority-0-b {
+  background-color: $primary;
+}
+
+.priority-1-b {
+  background-color: $warning;
+}
+
+.priority-2-b {
+  background-color: $danger;
+}

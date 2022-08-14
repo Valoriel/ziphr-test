@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ziphr-test"
+  },
+  "targets": {
+    "ziphr-test": {
+      "hosting": {
+        "assignment-frontend": [
+          "ziphr-test"
+        ]
+      }
+    }
+  }
+}
